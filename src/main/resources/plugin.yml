@@ -1,0 +1,11 @@
+name: AutoBroadcaster
+version: ${project.version}
+author: thealzhe
+description: Create and schedule easy automated server broadcasts!
+website: http://www.alzhe.tv/
+main: tv.alzhe.abc.AutoBroadcaster
+api-version: 1.13
+commands:
+   automessage:
+     description: Main command of ABC.
+     aliases: [autobc, abc]
