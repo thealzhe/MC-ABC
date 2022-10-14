@@ -6,6 +6,6 @@ website: http://www.alzhe.tv/
 main: tv.alzhe.abc.AutoBroadcaster
 api-version: 1.13
 commands:
-   automessage:
+   autobroadcaster:
      description: Main command of ABC.
      aliases: [autobc, abc]

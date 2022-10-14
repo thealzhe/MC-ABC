@@ -36,17 +36,17 @@ import org.json.simple.JSONValue;
 
 public class Updater {
 
-	private Plugin plugin;
-	private UpdateType type;
+	private final Plugin plugin;
+	private final UpdateType type;
 	private String versionName;
 	private String versionLink;
 	private String versionType;
 	private String versionGameVersion;
 
-	private boolean announce; // Whether to announce file downloads
+	private final boolean announce; // Whether to announce file downloads
 
 	private URL url; // Connecting to RSS
-	private File file; // The plugin's file
+	private final File file; // The plugin's file
 	private Thread thread; // Updater thread
 
 	private int id = -1; // Project's Curse ID
@@ -66,8 +66,8 @@ public class Updater {
 																					// of these,
 																					// don't update.
 	private static final int BYTE_SIZE = 1024; // Used for downloading files
-	private YamlConfiguration config; // Config file
-	private String updateFolder;// The folder that downloads will be placed in
+	private final YamlConfiguration config; // Config file
+	private final String updateFolder;// The folder that downloads will be placed in
 	private Updater.UpdateResult result = Updater.UpdateResult.SUCCESS; // Used for determining the
 																		// outcome of the update
 																		// process
@@ -347,7 +347,7 @@ public class Updater {
 				} else {
 					final BufferedInputStream bis = new BufferedInputStream(zipFile.getInputStream(entry));
 					int b;
-					final byte buffer[] = new byte[Updater.BYTE_SIZE];
+					final byte[] buffer = new byte[Updater.BYTE_SIZE];
 					final FileOutputStream fos = new FileOutputStream(destinationFilePath);
 					final BufferedOutputStream bos = new BufferedOutputStream(fos, Updater.BYTE_SIZE);
 					while ((b = bis.read(buffer, 0, Updater.BYTE_SIZE)) != -1) {

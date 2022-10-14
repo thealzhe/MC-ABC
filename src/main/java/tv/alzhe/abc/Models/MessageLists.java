@@ -62,7 +62,7 @@ public class MessageLists {
 		for (Entry<String, MessageList> entry : lists.entrySet()) {
 			MessageList list = lists.get(entry.getKey());
 
-			Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(AutoBroadcaster.plugin, new BroadcastTask(entry.getKey()), 20 * list.getInterval(), 20 * list.getInterval());
+			Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(AutoBroadcaster.plugin, new BroadcastTask(entry.getKey()), 20L * list.getInterval(), 20L * list.getInterval());
 		}
 	}
 

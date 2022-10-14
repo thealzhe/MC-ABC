@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 public class Utils {
 
@@ -100,10 +100,10 @@ public class Utils {
 		}
 
 		time = seconds;
-		time += minutes * 60;
-		time += hours * 3600;
-		time += days * 86400;
-		time += weeks * 604800;
+		time += minutes * 60L;
+		time += hours * 3600L;
+		time += days * 86400L;
+		time += weeks * 604800L;
 
 		// convert to milliseconds
 		time = time * 1000;

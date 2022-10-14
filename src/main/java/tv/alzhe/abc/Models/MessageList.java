@@ -141,7 +141,7 @@ public class MessageList {
 
 				if (to instanceof Player) {
 					if (m.contains("{NAME}"))
-						m = m.replace("{NAME}", ((Player) to).getName());
+						m = m.replace("{NAME}", to.getName());
 					if (m.contains("{DISPLAY_NAME}"))
 						m = m.replace("{DISPLAY_NAME}", ((Player) to).getDisplayName());
 					if (m.contains("{WORLD}"))

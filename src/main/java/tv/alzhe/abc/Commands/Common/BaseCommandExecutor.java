@@ -1,9 +1,10 @@
 package tv.alzhe.abc.Commands.Common;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -13,6 +14,8 @@ import org.bukkit.entity.Player;
 
 import tv.alzhe.abc.AutoBroadcaster;
 import tv.alzhe.abc.Permission;
+
+
 
 public class BaseCommandExecutor implements CommandExecutor, TabCompleter {
 
@@ -63,9 +66,7 @@ public class BaseCommandExecutor implements CommandExecutor, TabCompleter {
 		ArrayList<String> list = new ArrayList<String>();
 
 		for (BaseCommand command : CommandManager.getCommands()) {
-			for (String alias : command.aliases()) {
-				list.add(alias);
-			}
+			Collections.addAll(list, command.aliases());
 		}
 
 		return list;

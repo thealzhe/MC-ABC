@@ -10,7 +10,7 @@ import tv.alzhe.abc.Models.MessageList;
 import tv.alzhe.abc.Models.MessageLists;
 
 public class BroadcastTask implements Runnable {
-	private String name;
+	private final String name;
 
 	public BroadcastTask(String name) {
 		this.name = name;
