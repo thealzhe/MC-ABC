@@ -20,7 +20,7 @@
 ```
 
 ### ✏️ Choses à faire
-- Build the JAR.
+- Nothing.
 
 ### 📹 Previews
 - N/A
