@@ -189,6 +189,7 @@ public class MessageList {
 				if (m.contains("{SECOND}"))
 					m = m.replace("{SECOND}", Calendar.getInstance().get(Calendar.SECOND) + "");
 
+				/* Disabled json parsing due to errors.
 				if (message.isJsonMessage(i) && to instanceof Player) {
 					String v = Bukkit.getServer().getClass().getPackage().getName().replace(".", ",").split(",")[3];
 
@@ -210,6 +211,7 @@ public class MessageList {
 				} else {
 					to.sendMessage(ChatColor.translateAlternateColorCodes("&".charAt(0), m));
 				}
+			 */
 			}
 
 			for (String command : commands) {

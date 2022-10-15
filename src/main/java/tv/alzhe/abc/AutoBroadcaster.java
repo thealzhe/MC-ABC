@@ -1,7 +1,6 @@
 package tv.alzhe.abc;
 
 import java.io.File;
-// To bypass Java Error in console?
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;

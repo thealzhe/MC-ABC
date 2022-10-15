@@ -29,21 +29,21 @@ public class PluginCommands {
 
 	@BaseCommand(aliases = "update", desc = "Update to the latest version.", usage = "", permission = Permission.COMMAND_UPDATE)
 	public void onUpdateCmd(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-		Updater updater = new Updater(AutoBroadcaster.plugin, 37718, AutoBroadcaster.plugin.getFile(), UpdateType.NO_DOWNLOAD, false);
+		Updater updater = new Updater(AutoBroadcaster.plugin, 688558, AutoBroadcaster.plugin.getFile(), UpdateType.NO_DOWNLOAD, false);
 
 		if (updater.getResult() == UpdateResult.UPDATE_AVAILABLE) {
 			sender.sendMessage(ChatColor.GREEN + "There is an update available! Downloading update...");
 
-			UpdateResult result = new Updater(AutoBroadcaster.plugin, 37718, AutoBroadcaster.plugin.getFile(), UpdateType.DEFAULT, true).getResult();
+			UpdateResult result = new Updater(AutoBroadcaster.plugin, 688558, AutoBroadcaster.plugin.getFile(), UpdateType.DEFAULT, true).getResult();
 			if (result == UpdateResult.SUCCESS) {
-				sender.sendMessage(ChatColor.RESET + updater.getLatestName() + ChatColor.GREEN + " has been downloaded sucessfully!");
+				sender.sendMessage(ChatColor.YELLOW + updater.getLatestName() + ChatColor.GREEN + " has been downloaded sucessfully!");
 			} else {
-				sender.sendMessage(ChatColor.RED + "There was an error downloading " + ChatColor.RESET + updater.getLatestName() + ChatColor.RED + "!");
+				sender.sendMessage(ChatColor.RED + "There was an error downloading " + ChatColor.YELLOW + updater.getLatestName() + ChatColor.RED + "!");
 			}
 		} else {
 			PluginDescriptionFile desc = AutoBroadcaster.plugin.getDescription();
 
-			sender.sendMessage(ChatColor.RESET + desc.getName() + " v" + desc.getVersion() + ChatColor.GREEN + " is up  to date!");
+			sender.sendMessage(ChatColor.YELLOW + desc.getName() + " v" + desc.getVersion() + ChatColor.GREEN + " is already up to date!");
 		}
 	}
 

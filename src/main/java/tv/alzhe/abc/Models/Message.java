@@ -24,6 +24,7 @@ public class Message {
 		return this;
 	}
 
+	/* Old JSON parsing not working - disabled for now, until i found a new fix.
 	public boolean isJsonMessage(int index) {
 		try {
 			String v = Bukkit.getServer().getClass().getPackage().getName().replace(".", ",").split(",")[3];
@@ -33,6 +34,7 @@ public class Message {
 			return false;
 		}
 	}
+	*/
 
 	public LinkedList<String> getMessages() {
 		LinkedList<String> messages = new LinkedList<String>();
