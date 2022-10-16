@@ -32,7 +32,7 @@
 - Patch Json Parsing for using [json messages](https://minecraft.tools/en/json_text.php "").
 - Add localization files & managing.
 - Edit default plugin messages.
-*Did you know that you can help me by clicking in "Projects", staring my github repo & sharing code snippets?*
+*Did you know that you can help me by staring my github repo & sharing code snippets?*
 
 ### 📹 Previews
 - Not recorded.
