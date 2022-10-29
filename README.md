@@ -1,3 +1,6 @@
+# ⚠️ This repo is archived until i learn Java to fix errors.
+
+
 # 📰 ABC (AutoBroadcaster) • V1.1 @thealzhe
 
 ### 📥 Installation :
